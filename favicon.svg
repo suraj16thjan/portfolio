@@ -1,14 +1,27 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
   <defs>
     <linearGradient id="ecgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#10B981;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#34D399;stop-opacity:1" />
+      <stop offset="0%" style="stop-color:#06B6D4;stop-opacity:1" />
+      <stop offset="25%" style="stop-color:#3B82F6;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#8B5CF6;stop-opacity:1" />
+      <stop offset="75%" style="stop-color:#EC4899;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F43F5E;stop-opacity:1" />
     </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
   </defs>
+  <rect width="32" height="32" rx="6" fill="#0F172A"/>
   <path d="M2 16L6 16L8 8L10 24L12 12L14 20L16 4L18 28L20 10L22 18L24 14L26 16L30 16" 
         stroke="url(#ecgGradient)" 
-        stroke-width="2" 
+        stroke-width="2.5" 
         stroke-linecap="round" 
         stroke-linejoin="round" 
-        fill="none"/>
+        fill="none"
+        filter="url(#glow)"
+        opacity="0.95"/>
 </svg>
